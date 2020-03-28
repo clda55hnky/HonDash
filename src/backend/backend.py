@@ -1,3 +1,5 @@
+import json
+
 from time import sleep
 
 from autobahn_sync import app, publish, register
@@ -132,6 +134,7 @@ class Backend:
                 "odo": self.odo.get_mileage()[self.odo_unit],
                 "style": self.style.status,
                 "ver": __version__,
+                "data0": json.dumps(self.kpro.data0)
             },
         )
 
