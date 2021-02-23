@@ -9,7 +9,7 @@ services:
   nginx:
     image: nginx
     ports:
-     - "8080:80"
+     - "80:80"
     volumes:
       - frontend-volume:/usr/share/nginx/html/frontend/
       - node-modules-volume:/usr/share/nginx/html/node_modules/
